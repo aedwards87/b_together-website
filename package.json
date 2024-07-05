@@ -1,0 +1,46 @@
+{
+  "name": "nextjs-starter-prismic-minimal-ts",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Prismic <contact@prismic.io> (https://prismic.io)",
+  "scripts": {
+    "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors blue,magenta",
+    "next:dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@prismicio/client": "^7.3.1",
+    "@prismicio/next": "^1.5.0",
+    "@prismicio/react": "^2.7.3",
+    "@typeform/embed-react": "^3.15.0",
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@vercel/speed-insights": "^1.0.10",
+    "axios": "^1.6.8",
+    "clsx": "^2.1.0",
+    "js-cookie": "^3.0.5",
+    "modern-normalize": "^2.0.0",
+    "next": "^14.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.0",
+    "typescript": "^5.2.2",
+    "uuidv4": "^6.2.13",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.34",
+    "@types/js-cookie": "^3.0.6",
+    "babel-plugin-styled-components": "^2.1.4",
+    "concurrently": "^8.2.2",
+    "eslint-config-next": "^14.0.1",
+    "slice-machine-ui": "^1.23.1"
+  }
+}

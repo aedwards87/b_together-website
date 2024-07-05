@@ -1,0 +1,81 @@
+.container {
+  --spacing: 1.6rem;
+  position: fixed;
+  bottom: var(--spacing);
+  left: var(--spacing);
+  margin-right: var(--spacing);
+  max-width: 33rem;
+  padding: 3rem;
+  background: linear-gradient(
+    -55deg,
+    var(--colorPrimary100) -30%,
+    var(--colorGreen300) 50%,
+    var(--colorPrimary100) 130%
+  );
+  color: #fff;
+  display: grid;
+  gap: 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  box-shadow:
+    0 6px 14px hsl(var(--colorGreenRaw) / 15%),
+    0 10px 20px hsl(var(--colorGreenRaw) / 45%);
+}
+
+.contentContainer {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--colorOrange);
+}
+
+.headingContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.heading {
+  color: var(--colorWhite);
+  line-height: 1.1;
+}
+
+.body {
+  font-size: var(--fontSizeSmallText);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.button {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeSmallText);
+  padding: 1rem 2rem;
+  color: var(--colorWhite);
+}
+
+.button:last-child {
+  background-color: var(--colorPrimary200);
+}
+
+.button:hover,
+.button:focus {
+  border-color: var(--colorOrange900);
+}
+
+.button:last-child:hover {
+  background-color: var(--colorOrange900);
+  border-color: var(--colorOrange900);
+}

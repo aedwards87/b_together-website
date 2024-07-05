@@ -1,0 +1,490 @@
+/**/
+/******     Chronicle Deck     ******/
+/**/
+
+@font-face {
+  font-family: 'ChronicleDeck-Black';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./fonts/ChronicleDeck-Black.eot');
+  src: url('./fonts/ChronicleDeck-Black.woff') format('woff');
+  src:
+    url('./fonts/ChronicleDeck-Black.woff2') format('woff2'),
+    url('./fonts/ChronicleDeck-Black.ttf') format('truetype');
+}
+
+/**/
+/******     Bicyclette     ******/
+/**/
+@font-face {
+  font-family: 'Bicyclette-Bold';
+  font-weight: 600;
+  font-style: normal;
+  src: url('fonts/Bicyclette-Bold.eot');
+  src: url('fonts/Bicyclette-Bold.woff') format('woff');
+  src:
+    url('fonts/Bicyclette-Bold.woff2') format('woff2'),
+    url('fonts/Bicyclette-Bold.ttf') format('truetype');
+}
+
+/** Global variables **/
+:root {
+  /* Fonts */
+
+  /* Family */
+  --fontPrimarySerif: 'ChronicleDeck-Black', Georgia, Times New Roman, serif;
+  --fontPrimarySerifItalic: 'ChronicleDeck-Italic', Georgia, Times New Roman,
+    serif;
+  --fontPrimarySansSerif: 'Bicyclette-Regular', Helvetica, Arial, sans-serif;
+  --fontPrimarySansSerifBold: 'Bicyclette-Bold', Helvetica, Arial, sans-serif;
+  --fontPrimarySansSerifLight: 'Bicyclette-Light', Helvetica, Arial, sans-serif;
+
+  /* Size */
+  --fontSizeBase: 10px;
+  /* --fontSizeHero: clamp(4.5rem, calc(15vw + 1px), 10.6rem); */
+  --fontSizeHero: clamp(4.4rem, calc(13.5vw + 1px), 10.6rem);
+  --fontSizeLargeHeading: clamp(4.4rem, calc(13.5vw + 1px), 5rem);
+  --fontSizeMediumHeading: 4rem; /* 3.6rem */
+  --fontSizeRegularHeading: 2.8rem;
+  --fontSizeSmallHeading: 2.4rem;
+  --fontSizeLargeText: 2.4rem;
+  --fontSizeMediumText: 2rem;
+  --fontSizeNormalText: 1.8rem;
+  --fontSizeSmallText: 1.5rem;
+  --fontSizeSmallestText: 1.4rem;
+
+  --fontSizeBody: var(--fontSizeNormalText);
+  --fontSizeNav: var(--fontSizeSmallText);
+
+  /* Set base font size */
+  font-size: var(--fontSizeBase);
+
+  /* Weight */
+  --fontWeightLight: 300;
+  --fontWeightNormal: 400;
+  --fontWeightMedium: 500;
+  --fontWeightBold: 700;
+
+  /* Line height */
+  --lineHeight100: 1.1;
+  --lineHeight150: 1.15;
+  --lineHeight200: 1.2;
+  --lineHeight300: 1.3;
+  --lineHeight400: 1.4;
+  --lineHeight500: 1.5;
+  --lineHeightLargest: var(--lineHeight100);
+  --lineHeightLarge: var(--lineHeight150);
+  --lineHeightMedium: var(--lineHeight200);
+  --lineHeightNormal: var(--lineHeight400);
+  --lineHeightSmall: var(--lineHeight500);
+
+  /* Coupled font styles */
+  --heroFont: min(max(35px, 9vw), var(--fontSizeHero))
+    var(--fontSecondaryFamily);
+  --ctaFont: var(--fontWeightMedium) calc(var(--fontSizeBody) * 2)
+    var(--fontFamily);
+  --inputFont: var(--fontWeightNormal) var(--fontSizeBody * 1.8)
+    var(--fontFamily);
+
+  /* Spacing */
+
+  /* Colors */
+  --colorGreenRaw: 172deg 100% 17%;
+  --colorOrangeRaw: 33deg 100% 75%;
+  /* --colorOrangeRaw: 32deg 100% 75%; */
+  --colorOrangeRaw: 26deg 92% 72%;
+  --colorSandyRaw: 32deg 100% 90%;
+  --colorBlueRaw: 190deg 62% 88%;
+  --colorPeachRaw: 12deg 100% 92%;
+  --colorPurpleRaw: 249deg 100% 96%;
+  --colorLavenderRaw: 220deg 100% 92%;
+  --colorJasperRaw: 13deg 33% 58%;
+  --colorJasperRaw: 356deg 40% 51%;
+  --colorSageRaw: 73deg 42% 87%;
+  --colorYellowRaw: 35deg 73% 71%;
+  --colorOldRoseRaw: 356deg 33% 58%;
+  --colorTerracottaRaw: 17deg 58% 61%;
+  --colorOffWhiteRaw: deg % %;
+  --colorWhiteRaw: 0deg 0% 100%;
+  --colorGreyRaw: 234deg 10% 45%;
+
+  --colorGreen: hsl(var(--colorGreenRaw) / 100%);
+  --colorOrange: hsl(var(--colorOrangeRaw) / 100%);
+  --colorBlue: hsl(var(--colorBlueRaw) / 100%);
+  --colorPeach: hsl(var(--colorPeachRaw) / 100%);
+  --colorPurple: hsl(var(--colorPurpleRaw) / 100%);
+  --colorLavender: hsl(var(--colorLavenderRaw) / 100%);
+  --colorJasper: hsl(var(--colorJasperRaw) / 100%);
+  --colorSage: hsl(var(--colorSageRaw) / 100%);
+  --colorYellow: hsl(var(--colorYellowRaw) / 100%);
+  --colorOldRose: hsl(var(--colorOldRoseRaw) / 100%);
+  --colorTerracotta: hsl(var(--colorTerracottaRaw) / 100%);
+  --colorOffWhite: hsl(var(--colorOffWhiteRaw) / 100%);
+  --colorWhite: hsl(var(--colorWhiteRaw) / 100%);
+  --colorGrey: hsl(var(--colorGreyRaw) / 100%);
+
+  --colorPrimary100: var(--colorGreen);
+  --colorPrimary200: var(--colorOrange);
+
+  --colorGreen100: hsl(172deg 100% 29% / 100%);
+  --colorGreen200: hsl(172deg 100% 26% / 100%);
+  --colorGreen300: hsl(172deg 100% 23% / 100%);
+  --colorGreen400: hsl(172deg 100% 20% / 100%);
+  --colorGreen600: hsl(172deg 100% 14% / 100%);
+  --colorGreen700: hsl(172deg 100% 12% / 100%);
+  --colorGreen800: hsl(172deg 100% 10% / 100%);
+  --colorGreen900: hsl(172deg 100% 8% / 100%);
+
+  --colorOrange100: hsl(33deg 100% 87% / 100%);
+  --colorOrange200: hsl(33deg 100% 84% / 100%);
+  --colorOrange300: hsl(33deg 100% 81% / 100%);
+  --colorOrange400: hsl(33deg 100% 78% / 100%);
+  --colorOrange600: hsl(33deg 100% 72% / 100%);
+  --colorOrange700: hsl(33deg 100% 66% / 100%);
+  --colorOrange800: hsl(33deg 100% 60% / 100%);
+  --colorOrange900: hsl(33deg 100% 50% / 100%);
+
+  --colorPurple100: hsl(249deg 100% 96% / 100%);
+  --colorPurple200: hsl(249deg 100% 96% / 100%);
+  --colorPurple300: hsl(249deg 100% 96% / 100%);
+  --colorPurple400: hsl(249deg 100% 90% / 100%);
+  --colorPurple600: hsl(249deg 100% 84% / 100%);
+  --colorPurple700: hsl(249deg 100% 78% / 100%);
+  --colorPurple800: hsl(249deg 100% 72% / 100%);
+  --colorPurple900: hsl(249deg 100% 66% / 100%);
+
+  --colorSage100: hsl(73deg 42% 87% / 100%);
+  --colorSage200: hsl(73deg 42% 87% / 100%);
+  --colorSage300: hsl(73deg 42% 87% / 100%);
+  --colorSage400: hsl(73deg 42% 87% / 100%);
+  --colorSage600: hsl(73deg 42% 81% / 100%);
+  --colorSage700: hsl(73deg 42% 75% / 100%);
+  --colorSage800: hsl(73deg 42% 69% / 100%);
+  --colorSage900: hsl(73deg 42% 63% / 100%);
+
+  --colorBlue100: hsl(190deg 62% 94% / 100%);
+  --colorBlue200: hsl(190deg 62% 92% / 100%);
+  --colorBlue300: hsl(190deg 62% 90% / 100%);
+  --colorBlue400: hsl(190deg 62% 88% / 100%);
+  --colorBlue600: hsl(190deg 62% 82% / 100%);
+  --colorBlue700: hsl(190deg 62% 76% / 100%);
+  --colorBlue800: hsl(190deg 62% 70% / 100%);
+  --colorBlue900: hsl(190deg 62% 64% / 100%);
+
+  --colorPeach100: hsl(12deg 100% 100% / 100%);
+  --colorPeach200: hsl(12deg 100% 98% / 100%);
+  --colorPeach300: hsl(12deg 100% 96% / 100%);
+  --colorPeach400: hsl(12deg 100% 94% / 100%);
+  --colorPeach600: hsl(12deg 100% 88% / 100%);
+  --colorPeach700: hsl(12deg 100% 84% / 100%);
+  --colorPeach800: hsl(12deg 100% 80% / 100%);
+  --colorPeach900: hsl(12deg 100% 76% / 100%);
+
+  /*   
+  --colorPeach100: hsl(12deg 100% 92%; / 100%);
+  --colorPeach200: hsl(12deg 100% 92%; / 100%);
+  --colorPeach300: hsl(12deg 100% 92%; / 100%);
+  --colorPeach400: hsl(12deg 100% 92%; / 100%);
+  --colorPeach600: hsl(12deg 100% 92%; / 100%);
+  --colorPeach700: hsl(12deg 100% 92%; / 100%);
+  --colorPeach800: hsl(12deg 100% 92%; / 100%);
+  --colorPeach900: hsl(12deg 100% 92%; / 100%); */
+
+  --colorBodyText: var(--colorGrey);
+  --colorBodyHeading: var(--colorGreen);
+  --colorBodyBackground: var(--colorWhite);
+  --colorLinkText: var(--colorOrange);
+  --colorLinkHover: var(--colorJasper);
+  --colorButtonBackground: var(--colorOrange);
+  --colorButtonHover: var(--colorJasper);
+  --colorButtonDisabled: var(--colorGrey);
+  --colorButtonBorder: var(--colorOrange);
+  --colorButtonBorderHover: var(--colorJasper);
+  --colorButtonBorderDisabled: var(--colorGrey);
+  --colorButtonFont: var(--colorWhite);
+  --colorButtonFontHover: var(--colorWhite);
+  --colorButtonFontDisabled: var(--colorGrey);
+
+  --siteMaxWidth: 1680px;
+  --siteLayoutWidth: 1330px;
+  --siteColumnPadding: 2rem;
+  --normalBorderRadius: 3rem;
+  --siteBorderRadius: 3.4rem;
+  --siteInnerBorderRadius: 2.4rem;
+  --siteGap: 1.2rem;
+
+  --containerGap: 3rem;
+  --animation: 300ms ease;
+
+  /* Elevations */
+  /****** TAILWIND SHADOWS ******/
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 20px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 20px 50px -12px rgb(0 0 0 / 0.2);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  /****** TAILWIND SHADOWS ******/
+
+  --shadowColor: var(--colorOrangeRaw);
+  --shadowElevationSmall: 0px 0.5px 0.6px hsl(var(--shadowColor) / 0.2),
+    0px 0.7px 0.8px -1.2px hsl(var(--shadowColor) / 0.2),
+    0px 1.6px 1.8px -2.5px hsl(var(--shadowColor) / 0.2);
+  --shadowElevationMedium: 0px 0.5px 0.6px hsl(var(--shadowColor) / 0.21),
+    0px 1.4px 1.6px -0.8px hsl(var(--shadowColor) / 0.21),
+    0px 3.3px 3.7px -1.7px hsl(var(--shadowColor) / 0.21),
+    0px 8px 9px -2.5px hsl(var(--shadowColor) / 0.21);
+  /* --shadowElevationLarge: 0px 0.5px 0.6px hsl(var(--shadowColor) / 0.19),
+    0px 2.1px 2.4px -0.4px hsl(var(--shadowColor) / 0.19),
+    0px 3.8px 4.3px -0.7px hsl(var(--shadowColor) / 0.19),
+    0px 6.1px 6.9px -1.1px hsl(var(--shadowColor) / 0.19),
+    0px 9.7px 10.9px -1.4px hsl(var(--shadowColor) / 0.19),
+    -0.1px 15.2px 17.1px -1.8px hsl(var(--shadowColor) / 0.19),
+    -0.1px 23px 20.9px -2.1px hsl(var(--shadowColor) / 0.19),
+    -0.1px 33.8px 38px -2.5px hsl(var(--shadowColor) / 0.19); */
+  --shadowElevationLarge: 0px 0.7px 0.1px hsl(var(--shadowColor) / 0.1),
+    0px 2.4px 2.6px -0.5px hsl(var(--shadowColor) / 0.1),
+    0px 4.1px 4.5px -0.9px hsl(var(--shadowColor) / 0.1),
+    0px 6.4px 7.1px -1px hsl(var(--shadowColor) / 0.1),
+    -0.1px 9.7px 10.7px -1.6px hsl(var(--shadowColor) / 0.09),
+    -0.1px 9.4px 15.9px -1.1px hsl(var(--shadowColor) / 0.09),
+    -0.1px 21.2px 23.4px -2.3px hsl(var(--shadowColor) / 0.09),
+    -0.2px 30.4px 33.5px -2.6px hsl(var(--shadowColor) / 0.09),
+    -0.3px 42.6px 47px -3px hsl(var(--shadowColor) / 0.08);
+}
+
+/* @media (min-width: 420px) {
+  :root {
+    --fontSizeBody: 1.8rem;
+    --fontSizeLarge: 2.2rem;
+    --fontSizeMedium: 2rem;
+    --fontSizeSmall: 1.6rem;
+    --fontSizeSmallest: 1.4rem;
+  }
+} */
+
+@media (min-width: 500px) {
+  :root {
+    --fontSizeHero: clamp(7rem, calc(8vw + 1px), 10.6rem);
+    --fontSizeLargeHeading: 5.2rem;
+    --fontSizeMediumHeading: 4.6rem; /* 3.6rem */
+    --fontSizeRegularHeading: 3.2rem;
+    --fontSizeSmallHeading: 2.8rem;
+    --fontSizeLargeText: 2.4rem;
+    --fontSizeMediumText: 2rem;
+    --fontSizeSmallText: 1.6rem;
+    /* --fontSizeSmallestText: 1.5rem; */
+
+    /* --siteBorderRadius: 3rem; */
+    /* --siteGap: 2rem; */
+  }
+}
+
+@media (min-width: 980px) {
+  :root {
+    --fontSizeLargeHeading: 6.4rem;
+    --fontSizeMediumHeading: 4.6rem;
+    /* --fontSizeSmallHeading: 3.6rem; */
+    --fontSizeLargeText: 2.4rem;
+    --fontSizeMediumText: 2rem;
+    --fontSizeNormalText: 1.8rem;
+    /* --fontSizeSmallText: 1.8rem; */
+    /* --fontSizeSmallText: 1.4rem; */
+
+    --containerGap: 4rem;
+  }
+}
+
+/** Global styles **/
+
+/* html {} */
+
+body {
+  font-family: var(--fontPrimarySansSerif);
+  font-size: var(--fontSizeBody);
+  line-height: var(--lineHeightNormal);
+  color: var(--colorBodyText);
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+a {
+  color: (var(--colorLinkText));
+}
+
+a:hover,
+a:focus-visible,
+nav a.active {
+  color: var(--colorLinkHover);
+}
+
+button {
+  background: transparent;
+  border-radius: 999px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid var(--colorPrimary200);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a,
+button {
+  outline-offset: 4px;
+}
+
+/* Unstyled lists. Note for accessability make sure to add role="list" if it is actually to be a list */
+ol,
+ul {
+  --listStyle: none;
+  list-style: var(--listStyle);
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+  text-decoration: underline;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  --display: block;
+  display: var(--display);
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  object-fit: cover;
+  /* border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem; */
+}
+
+/* p + p,
+p + ul,
+section li + li {
+  margin-top: 2rem;
+} */
+
+p,
+a,
+li,
+span,
+td,
+blockquote,
+cite,
+input {
+  /* letter-spacing: 0.3px; */
+  line-height: var(--lineHeightSmall);
+  text-wrap: pretty;
+}
+
+input {
+  color: var(--colorPrimary100);
+  font-family: var(--fontPrimarySansSerif);
+  /* font-size: var(--fontSizeBody); */
+  font-size: var(--fontSizeNormalText);
+  /* font-size: var(--fontSizeSmallText); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  color: var(--colorBodyHeading);
+  text-wrap: balance;
+  > span {
+    line-height: var(--headingLineHeight);
+  }
+}
+
+button {
+  font-size: calc(var(--fontSizeBody) + 0.2rem);
+}
+
+mark,
+.mark {
+  background: var(--colorHighlight, yellow);
+  padding: 0 2px 2px 2px;
+  margin: 0;
+  display: inline;
+  line-height: 1;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.scrollBarMargin {
+  margin-right: 15px;
+}
+
+.smoothScroll {
+  scroll-behavior: smooth;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+}

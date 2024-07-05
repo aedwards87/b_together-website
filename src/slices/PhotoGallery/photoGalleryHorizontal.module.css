@@ -1,0 +1,63 @@
+.imageOuterContainer {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+}
+
+.imageOuterContainer:before,
+.imageOuterContainer:after {
+  --gradientDirection: 90deg;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 15%;
+  background: linear-gradient(
+    var(--gradientDirection),
+    var(--colorWhite) 10%,
+    transparent 70%
+  );
+}
+
+.imageOuterContainer:before {
+  --gradientDirection: 90deg;
+  left: 0;
+}
+
+.imageOuterContainer:after {
+  --gradientDirection: 270deg;
+  right: 0;
+}
+
+.imageContainer {
+  display: flex;
+  gap: 2rem;
+  height: 300px;
+  max-width: var(--siteMaxWidth);
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.imageContainer img {
+  border-radius: var(--normalBorderRadius);
+  -webkit-border-radius: var(--normalBorderRadius);
+  -moz-border-radius: var(--normalBorderRadius);
+  -ms-border-radius: var(--normalBorderRadius);
+  -o-border-radius: var(--normalBorderRadius);
+}
+
+.imageContainer:last-child {
+  flex-direction: row-reverse;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.imageContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.image {
+  height: 100%;
+  background-color: hsl(var(--colorJasperRaw) / 20%);
+}

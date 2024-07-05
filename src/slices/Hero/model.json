@@ -1,0 +1,355 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Stacked",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,em,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imageSticker": {
+          "type": "Image",
+          "config": {
+            "label": "Image Sticker",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "bento",
+      "name": "Bento",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Main: Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,strong,em"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Main: Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Main: Button Text",
+            "placeholder": ""
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Main: Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "illustration": {
+          "type": "Image",
+          "config": {
+            "label": "Main: Illustration",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "titleCatOne": {
+          "type": "Text",
+          "config": {
+            "label": "Category 1: Title",
+            "placeholder": ""
+          }
+        },
+        "imageCatOne": {
+          "type": "Image",
+          "config": {
+            "label": "Category 1: Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttonLinkCatOne": {
+          "type": "Link",
+          "config": {
+            "label": "Category 1: Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "titleCatTwo": {
+          "type": "Text",
+          "config": {
+            "label": "Category 2: Title",
+            "placeholder": ""
+          }
+        },
+        "imageCatTwo": {
+          "type": "Image",
+          "config": {
+            "label": "Category 2: Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "illustrationCatTwo": {
+          "type": "Image",
+          "config": {
+            "label": "Category 2: Illustration",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttonLinkCatTwo": {
+          "type": "Link",
+          "config": {
+            "label": "Category 2: Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "titleCatThree": {
+          "type": "Text",
+          "config": {
+            "label": "Category 3: Title",
+            "placeholder": ""
+          }
+        },
+        "imageCatThree": {
+          "type": "Image",
+          "config": {
+            "label": "Category 3: Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "illustrationCatThree": {
+          "type": "Image",
+          "config": {
+            "label": "Category 3: Illustration",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "buttonLinkCatThree": {
+          "type": "Link",
+          "config": {
+            "label": "Category 3: Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "layered",
+      "name": "Layered",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,em,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imageSmall": {
+          "type": "Image",
+          "config": {
+            "label": "Image Small",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "illustrationOne": {
+          "type": "Image",
+          "config": {
+            "label": "Illustration One",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "illustrationTwo": {
+          "type": "Image",
+          "config": {
+            "label": "Illustration Two",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "accordion",
+      "name": "Accordion",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,em,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "illustration": {
+          "type": "Image",
+          "config": {
+            "label": "illustration",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Accordion: Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Accordion: Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Accordion: Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Accordion: Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

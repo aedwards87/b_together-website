@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  gap: var(--containerGap);
+}
+
+.contentContainer {
+  --align: left;
+  --justify: center;
+  display: grid;
+  align-items: center;
+  justify-content: var(--justify);
+  gap: 2rem;
+  text-align: var(--align);
+}
+
+.bodyContainer {
+  max-width: 60ch;
+  font-size: var(--fontSizeMediumText);
+  display: grid;
+  gap: 2rem;
+}
+
+.bodyContainer h2 {
+  margin-top: 3rem;
+}
+
+.bodyContainer h3 {
+  margin-top: 2rem;
+}
+
+.bodyContainer ul {
+  --listStyle: unset;
+  display: grid;
+  gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 0rem;
+}
+
+.bodyContainer li {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.bodyContainer ul li::marker {
+  color: hsl(var(--colorOrangeRaw));
+}

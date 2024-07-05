@@ -1,0 +1,153 @@
+.container {
+  display: grid;
+  gap: var(--siteGap);
+}
+
+.contentContainer {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.cardContainer {
+  display: grid;
+  place-content: center;
+  align-items: start;
+  justify-items: center;
+  gap: 3rem;
+}
+
+.card {
+  --color: var(--colorOrangeRaw);
+  top: 7rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 38ch;
+  padding: clamp(3rem, 3vw, 4rem);
+  border: 4px solid hsl(var(--color) / 100%);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  box-shadow: var(--shadowElevationLarge);
+  background: linear-gradient(
+    140deg,
+    var(--colorOrange) -380%,
+    transparent 50%,
+    var(--colorOrange) 380%
+  );
+}
+
+.card:first-child {
+  justify-self: end;
+}
+
+.card:last-child {
+  justify-self: start;
+}
+
+.cardContentContainer {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 3rem;
+}
+
+.cardContentContainer ul {
+  --listStyle: unset;
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 0rem;
+}
+
+.cardContentContainer li {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.cardContentContainer ul li::marker {
+  color: hsl(var(--color));
+}
+
+.card:nth-child(odd) {
+  --color: var(--colorTerracottaRaw);
+  --shadowColor: var(--colorGreen);
+  box-shadow: var(--shadowElevationLarge);
+  background: linear-gradient(
+    140deg,
+    var(--colorTerracotta) -380%,
+    transparent 50%,
+    var(--colorTerracotta) 380%
+  );
+}
+
+.cardHeading {
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  line-height: 1.1;
+  /* max-width: 18ch; */
+}
+
+.cardTime {
+  padding: 2rem;
+  width: 100%;
+  font-size: var(--fontSizeLargeText);
+  font-size: 20px;
+  color: var(--colorPrimary100);
+  background-color: hsl(var(--color) / 20%);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+}
+
+.cardPriceContainer {
+  display: flex;
+  place-items: center;
+  gap: 1.5rem;
+  color: var(--colorPrimary100);
+}
+
+.cardPrice {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: 6rem;
+}
+
+.cardCurrency,
+.cardPriceModel {
+  font-size: var(--fontSizeSmallHeading);
+}
+
+.cardPriceModel {
+  font-family: var(--fontPrimarySansSerifLight);
+}
+
+.cardButtonContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardButtonContainer button {
+  flex: 1;
+}
+
+@media (min-width: 978px) {
+  .card {
+    position: sticky;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+}

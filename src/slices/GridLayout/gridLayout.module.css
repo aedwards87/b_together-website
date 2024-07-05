@@ -1,0 +1,147 @@
+.container {
+  display: grid;
+  gap: var(--containerGap);
+  justify-items: center;
+}
+
+.contentContainer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.contentContainer p {
+  max-width: 60ch;
+}
+
+.cardContainer {
+  --animation: 300ms ease;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(348px, 1fr));
+  align-items: start;
+  gap: 2.6rem;
+}
+
+.card {
+  --bgColor: hsl(var(--colorOrangeRaw) / 25%);
+  display: grid;
+  align-content: start;
+  gap: 3rem;
+  border: 0.6rem solid var(--colorWhite);
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 -3rem 5rem hsl(var(--colorOrangeRaw) / 14%);
+  border-radius: var(--siteBorderRadius);
+  -webkit-border-radius: var(--siteBorderRadius);
+  -moz-border-radius: var(--siteBorderRadius);
+  -ms-border-radius: var(--siteBorderRadius);
+  -o-border-radius: var(--siteBorderRadius);
+  transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+  -webkit-transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+  -moz-transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+  -ms-transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+  -o-transition:
+    transform var(--animation),
+    box-shadow var(--animation);
+}
+
+.card p {
+  text-wrap: initial;
+  text-wrap: pretty;
+}
+
+.cardSVG {
+  position: absolute;
+  bottom: -0.4px;
+  right: -0.4px;
+}
+
+.cardContentContainer {
+  display: grid;
+  gap: 1.4rem;
+  padding: 3rem;
+  padding-top: 0;
+}
+
+.cardImageContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 1.6rem;
+  margin-bottom: 0;
+  border-radius: var(--siteInnerBorderRadius);
+  -webkit-border-radius: var(--siteInnerBorderRadius);
+  -moz-border-radius: var(--siteInnerBorderRadius);
+  -ms-border-radius: var(--siteInnerBorderRadius);
+  -o-border-radius: var(--siteInnerBorderRadius);
+  transform: translateZ(0);
+}
+
+.cardImage {
+  aspect-ratio: 1;
+  outline: 1px solid white;
+  transition: transform var(--animation);
+  -webkit-transition: transform var(--animation);
+  -moz-transition: transform var(--animation);
+  -ms-transition: transform var(--animation);
+  -o-transition: transform var(--animation);
+}
+
+.button {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  border: 2px solid var(--colorPrimary200);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+  padding: 2rem;
+  transition: background var(--animation);
+  -webkit-transition: background var(--animation);
+  -moz-transition: background var(--animation);
+  -ms-transition: background var(--animation);
+  -o-transition: background var(--animation);
+}
+
+.card:hover {
+  color: unset;
+  background-color: var(--bgColor);
+  box-shadow: var(--shadowElevationLarge);
+  transform: translateY(-2%);
+  -webkit-transform: translateY(-2%);
+  -moz-transform: translateY(-2%);
+  -ms-transform: translateY(-2%);
+  -o-transform: translateY(-2%);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.1);
+}
+
+.card:hover .cardSVGAnimate path {
+  fill: var(--bgColor);
+}
+
+.card:hover .button {
+  background: var(--colorPrimary200);
+}
+
+/* 
+.card:hover .button svg path {
+  stroke: white;
+} */
+
+@media (min-width: 769px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fill, minmax(354px, 1fr));
+  }
+}

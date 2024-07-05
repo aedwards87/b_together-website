@@ -1,0 +1,141 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Weather"
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint et cillum nisi nostrud laboris commodo tempor eiusmod."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"price",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "98",
+							"type": "Number"
+						}
+					],
+					[
+						"pricePlanHeading",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading4",
+									"content": {
+										"text": "Truth"
+									}
+								}
+							]
+						}
+					],
+					[
+						"pricePlanBody",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Lorem voluptate dolor aliqua est culpa fugiat ut in cupidatat aliqua ad ad. Nulla tempor id elit dolore sunt et."
+									}
+								}
+							]
+						}
+					],
+					[
+						"pricingModel",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "Monthly",
+							"type": "Select"
+						}
+					],
+					[
+						"startTime",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Timestamp",
+							"value": "2019-12-31T10:44:56Z"
+						}
+					],
+					[
+						"finishTime",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Timestamp",
+							"value": "2022-11-20T19:57:54Z"
+						}
+					],
+					[
+						"category",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "None",
+							"type": "Select"
+						}
+					],
+					[
+						"buttonLabelTwo",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "problem",
+							"type": "Text"
+						}
+					],
+					[
+						"buttonLinkTwo",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					],
+					[
+						"buttonLabelOne",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "usual",
+							"type": "Text"
+						}
+					],
+					[
+						"buttonLinkOne",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]

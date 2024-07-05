@@ -1,0 +1,131 @@
+.container {
+  display: grid;
+  gap: var(--containerGap);
+  position: relative;
+}
+
+.innerContainer {
+  display: grid;
+  gap: var(--siteGap);
+}
+
+.illustration {
+  display: none;
+}
+
+:where(.gridContainerOne) > *,
+:where(.gridContainerTwo) > * {
+  border-radius: var(--normalBorderRadius);
+  -webkit-border-radius: var(--normalBorderRadius);
+  -moz-border-radius: var(--normalBorderRadius);
+  -ms-border-radius: var(--normalBorderRadius);
+  -o-border-radius: var(--normalBorderRadius);
+  overflow: hidden;
+}
+
+.headingContainer {
+  max-width: 60ch;
+  text-wrap: balance;
+}
+
+.subheadingContainer {
+  background-color: var(--colorOrange100);
+  /* padding: clamp(4rem, 11vw, 6rem); */
+  padding: clamp(3.5rem, 11vw, 6rem);
+  display: grid;
+  place-items: center;
+}
+
+.subheadingContainer p {
+  /* font-size: clamp(20px, 5.3vw, 46px); */
+  font-size: clamp(20px, 8vw, 46px);
+  font-family: var(--fontPrimarySansSerifBold);
+  line-height: 1.2;
+  text-wrap: balance;
+  max-width: 24ch;
+  background: linear-gradient(
+    130deg,
+    var(--colorPrimary200) 20%,
+    var(--colorJasper) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bodyContainer {
+  display: grid;
+  place-items: center;
+  /* padding: clamp(2rem, 12vw, 10rem); */
+  padding: clamp(2rem, 12vw, 6rem);
+  text-wrap: balance;
+  background-color: var(--colorPurple);
+}
+
+.bodyContainer p {
+  max-width: 47ch;
+  text-wrap: balance;
+}
+
+.gridContainerOne,
+.gridContainerTwo {
+  display: grid;
+  gap: var(--siteGap);
+}
+
+.gridContainerOne {
+  grid-template-rows: auto 1fr;
+}
+
+.gridContainerTwo {
+  grid-template-rows: 1fr auto;
+}
+
+.imageTwoContainer {
+  grid-row: 2;
+}
+
+.imageOneContainer,
+.imageTwoContainer {
+  max-height: 440px;
+}
+
+.imageOne,
+.imageTwo {
+  height: 100%;
+}
+
+@media (min-width: 764px) {
+  .innerContainer {
+    grid-template-columns: minmax(368px, 1fr) 2fr;
+    grid-template-columns: minmax(328px, 1fr) 2fr;
+  }
+  .illustration {
+    display: block;
+    position: absolute;
+    top: -100px;
+    right: -15px;
+    width: 220px;
+    z-index: 1;
+  }
+  .subheadingContainer {
+    padding: clamp(4rem, 6vw, 6rem);
+  }
+  .subheadingContainer p {
+    font-size: clamp(20px, 4vw, 46px);
+    max-width: 24ch;
+  }
+  .bodyContainer {
+    padding: clamp(4rem, 6vw, 6rem);
+  }
+  .bodyContainer p {
+    max-width: 25ch;
+  }
+  .imageTwoContainer {
+    grid-row: 1;
+  }
+  .imageOneContainer,
+  .imageTwoContainer {
+    max-height: unset;
+  }
+}

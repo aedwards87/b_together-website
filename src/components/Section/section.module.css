@@ -1,0 +1,123 @@
+.container {
+  --maxWidth: var(--siteLayoutWidth);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.container:first-child .layoutContainer {
+  margin-top: 6.7rem;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.layoutContainer {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: var(--maxWidth);
+  padding: 0 1.6rem;
+  margin: clamp(4rem, calc(10vw + 1px), 6rem) 0;
+}
+
+.orange {
+  --bgOpacity: 8%;
+  background-color: hsl(var(--colorOrangeRaw) / 30%);
+}
+
+.sage {
+  --bgOpacity: 14%;
+  background-color: hsl(var(--colorSageRaw) / 40%);
+}
+
+.purple {
+  --bgOpacity: 49%;
+  background-color: hsl(var(--colorPurpleRaw) / 100%);
+}
+
+.lavender {
+  --bgOpacity: 49%;
+  background-color: hsl(var(--colorLavenderRaw) / 100%);
+}
+
+.blue {
+  --bgOpacity: 28%;
+  background-color: hsl(var(--colorBlueRaw) / 100%);
+}
+
+:where(.orange) .layoutContainer {
+  margin: clamp(9rem, 14vw, 12rem) 0;
+}
+
+.heroGradient {
+  background: linear-gradient(
+    160deg,
+    var(--colorOrange100) -50%,
+    var(--colorWhite) 50%
+  );
+}
+
+.background {
+  --backgroundImage: url('https://images.prismic.io/b-together-website/65d2c89e9be9a5b998b5fb86_Frame153-1-.jpg?auto=format,compress');
+  margin: clamp(0rem, calc(5vw + 1px), 6rem) 0;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  /* overflow: hidden; */
+  z-index: 1;
+}
+
+.background:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--backgroundImage);
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: overlay;
+  opacity: var(--bgOpacity);
+  filter: blur(0.1rem);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  z-index: 0;
+}
+
+.boxed {
+  margin: 0 2rem 6rem;
+  /* margin-bottom: clamp(2rem, 14vw, 22rem); */
+}
+
+:where(.boxed) .layoutContainer {
+  margin: 0rem;
+  padding: clamp(2rem, 7vw, 6rem);
+}
+
+@media screen and (min-width: 500px) {
+  /* :where(footer.container) .layoutContainer {
+    margin-bottom: 8rem;
+  } */
+}
+
+@media screen and (min-width: 768px) {
+  .layoutContainer {
+    margin: 8rem 0;
+    padding: 0 2rem;
+  }
+
+  :where(.background) .layoutContainer {
+    margin: clamp(14rem, 11vw, 18rem) 0;
+  }
+
+  :where(.boxed) .layoutContainer {
+    margin: 0rem;
+    padding: clamp(4rem, 4vw, 6rem);
+  }
+}

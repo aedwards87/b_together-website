@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  gap: var(--containerGap);
+}
+
+.contentContainer {
+  --align: center;
+  --justify: center;
+  display: grid;
+  align-items: center;
+  justify-content: var(--justify);
+  gap: 2rem;
+  text-align: var(--align);
+}
+
+.bodyContainer {
+  max-width: 60ch;
+  font-size: var(--fontSizeMediumText);
+  margin: 0 auto; /* Added as text wasn't centering, and trying to avoid justify-items: center on contentContainer. Example Holiday Camps page pricing section */
+}
+
+.bodyContainer ul {
+  --listStyle: unset;
+  padding-left: 2rem;
+  padding-right: 0rem;
+}
+
+.bodyContainer li {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.bodyContainer ul li::marker {
+  color: hsl(var(--colorOrangeRaw));
+}

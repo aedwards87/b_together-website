@@ -1,0 +1,105 @@
+.heading {
+  position: relative;
+  color: var(--color);
+  z-index: 1;
+}
+
+/* h2.heading strong {
+  background: linear-gradient(
+    130deg,
+    var(--colorPrimary200) 20%,
+    var(--colorJasper) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+} */
+
+h2.orange strong {
+  color: var(--colorOrange100);
+  background: unset;
+  -webkit-text-fill-color: unset;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+}
+
+h2.gradient strong {
+  background: linear-gradient(
+    130deg,
+    var(--colorPrimary200) 20%,
+    var(--colorJasper) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.xl {
+  font-family: var(--fontPrimarySerif);
+  font-size: var(--fontSizeHero);
+  /* font-size: clamp(4rem, calc(1vw + 1px), 9.6rem); */
+
+  line-height: var(--lineHeightLarge);
+  letter-spacing: -1px;
+  background: linear-gradient(
+    -55deg,
+    var(--colorPrimary100) -30%,
+    var(--colorGreen100) 50%,
+    var(--colorPrimary100) 130%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/* 
+.xl em {
+  background: linear-gradient(
+    130deg,
+    var(--colorPrimary200) 20%,
+    var(--colorJasper) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+} */
+
+.xl em {
+  font-family: var(--fontPrimarySerifItalic);
+}
+
+.lg {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeLargeHeading);
+  /* line-height: var(--lineHeightLarge); */
+  line-height: var(--lineHeightLargest);
+}
+
+.md {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeMediumHeading);
+  line-height: var(--lineHeightMedium);
+}
+
+.rg {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeRegularHeading);
+  line-height: var(--lineHeightMedium);
+}
+
+.sm {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeSmallHeading);
+  line-height: var(--lineHeightMedium);
+}
+
+.xs {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeLargeText);
+  line-height: var(--lineHeightMedium);
+}
+
+.xxs {
+  font-family: var(--fontPrimarySansSerifBold);
+  font-size: var(--fontSizeMediumText);
+  line-height: var(--lineHeightMedium);
+}

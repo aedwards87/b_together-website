@@ -1,0 +1,17 @@
+.enquireFormContainer {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 67px);
+  height: calc(100svh - 67px);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.enquireForm {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}

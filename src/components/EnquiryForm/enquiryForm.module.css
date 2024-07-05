@@ -1,0 +1,227 @@
+.form {
+  display: grid;
+  gap: 4rem;
+}
+
+.form button {
+  justify-self: start;
+}
+
+.container {
+  display: grid;
+  gap: 3rem;
+}
+
+.contentContainer {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.fieldsContainer {
+  display: grid;
+  gap: 2rem;
+}
+
+.field {
+  position: relative;
+  z-index: 0;
+}
+
+.radioContainer {
+  display: grid;
+  justify-content: space-between;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.radioLabel,
+.checkLabel {
+  --borderColor: var(--colorOrange400);
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  text-wrap: nowrap;
+  padding-left: 3.6rem;
+  cursor: pointer;
+}
+
+.radioLabel:hover,
+.radioLabel:focus,
+.radioLabel:checked,
+.checkLabel:hover,
+.checkLabel:focus,
+.checkLabel:checked {
+  --borderColor: var(--colorOrange);
+}
+
+.radioButton,
+.checkButton {
+  position: absolute;
+  opacity: 0;
+}
+
+.radioMark,
+.checkMark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  /* height: 2.4rem;
+  width: 2.4rem; */
+  width: 2.2ch;
+  aspect-ratio: 1;
+  border: 2px solid var(--borderColor);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.field:hover .radioMark,
+.field:focus .radioMark,
+.field:hover .checkMark,
+.field:focus .checkMark {
+  --borderColor: var(--colorOrange);
+  background-color: var(--borderColor);
+}
+
+.radioMark::after,
+.checkMark::after {
+  content: '';
+  display: none;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.radioLabel:hover .radioMark,
+.radioButton:focus ~ .radioMark,
+.checkLabel:hover .checkMark,
+.checkButton:focus ~ .checkMark {
+  background-color: var(--colorOrange200);
+}
+
+.radioButton:checked ~ .radioMark,
+.checkButton:checked ~ .checkMark {
+  background-color: var(--colorOrange);
+  border-color: var(--colorOrange);
+}
+
+.radioLabel:hover .radioMark:after,
+.radioButton:focus ~ .radioMark:after,
+.radioButton:checked ~ .radioMark::after,
+.checkLabel:hover .checkMark:after,
+.checkButton:focus ~ .checkMark:after,
+.checkButton:checked ~ .checkMark::after {
+  display: block;
+}
+
+.consentContainer {
+  font-size: var(--fontSizeSmallestText);
+}
+
+.label {
+  font-size: var(--fontSizeSmallestText);
+  position: absolute;
+  top: -1rem;
+  left: 2.1rem;
+  padding: 0 0.4em;
+  background: white;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1.6rem 2.3rem;
+  border: 2px solid var(--colorPrimary200);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+}
+
+.input::placeholder {
+  color: hsl(var(--colorGreyRaw) / 50%);
+}
+
+.input {
+  width: 100%;
+  padding: 1.6rem 2.3rem;
+  background-color: hsl(var(--colorWhiteRaw) / 50%);
+  border: 2px solid var(--colorOrange400);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+}
+
+.input:hover,
+.input:focus {
+  border: 2px solid var(--colorPrimary200);
+}
+
+.error > .errorMessage {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--colorJasper);
+}
+
+.error > input {
+  border-color: var(--colorJasper);
+}
+
+.field .errorMessage {
+  padding-left: 2.4rem;
+}
+
+.errorMessage {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 15px;
+  color: var(--colorJasper);
+}
+
+.radioContainer .errorMessage,
+.consentContainer .errorMessage {
+  grid-column: 1 / -1;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+}
+
+@media (min-width: 978px) {
+  .form {
+    gap: 6rem;
+  }
+
+  .radioContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

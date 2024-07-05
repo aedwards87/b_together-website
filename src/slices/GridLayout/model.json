@@ -1,0 +1,431 @@
+{
+  "id": "grid_layout",
+  "type": "SharedSlice",
+  "name": "GridLayout",
+  "description": "GridLayout",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Image with Text",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "background": {
+          "type": "Boolean",
+          "config": {
+            "label": "Background",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "backgroundColour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Orange",
+              "Purple",
+              "Blue",
+              "Lavender"
+            ]
+          }
+        }
+      },
+      "items": {
+        "cardImage": {
+          "type": "Image",
+          "config": {
+            "label": "Card Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cardHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "cardBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,em,paragraph"
+          }
+        },
+        "cardLink": {
+          "type": "Link",
+          "config": {
+            "label": "Card Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        }
+      }
+    },
+    {
+      "id": "iconWithText",
+      "name": "Icon with Text",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,paragraph,em"
+          }
+        },
+        "background": {
+          "type": "Boolean",
+          "config": {
+            "label": "Background",
+            "placeholder_false": "Spot Colour",
+            "placeholder_true": "Background Colour",
+            "default_value": true
+          }
+        },
+        "backgroundSpotColour": {
+          "type": "Select",
+          "config": {
+            "label": "Background/Spot Colour",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Orange",
+              "Purple",
+              "Blue",
+              "Lavender"
+            ]
+          }
+        }
+      },
+      "items": {
+        "cardIcon": {
+          "type": "Image",
+          "config": {
+            "label": "Card Icon",
+            "constraint": {
+              "height": 40
+            },
+            "thumbnails": []
+          }
+        },
+        "cardHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "cardBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "card Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "cardButtonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "Card Button Label",
+            "placeholder": ""
+          }
+        },
+        "cardButtonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Card Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        }
+      }
+    },
+    {
+      "id": "theBigOne",
+      "name": "The Big One",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "ctaButtonLabel": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Button Label",
+            "placeholder": ""
+          }
+        },
+        "ctaButtonLink": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "timetableHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Timetable Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "timetableBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Timetable Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "timetableJanuaryLink": {
+          "type": "Link",
+          "config": {
+            "label": "Timetable January Link",
+            "placeholder": "",
+            "select": "media"
+          }
+        },
+        "timetableFebruaryLink": {
+          "type": "Link",
+          "config": {
+            "label": "Timetable February Link",
+            "placeholder": "",
+            "select": "media"
+          }
+        },
+        "timetableMarchLink": {
+          "type": "Link",
+          "config": {
+            "label": "Timetable March Link",
+            "placeholder": "",
+            "select": "media"
+          }
+        },
+        "timetableAprilLink": {
+          "type": "Link",
+          "config": {
+            "label": "Timetable April Link",
+            "placeholder": "",
+            "select": "media"
+          }
+        },
+        "yearlyScheduleHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Yearly Schedule Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "yearlyScheduleBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Yearly Schedule Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,em,paragraph"
+          }
+        },
+        "yearlyScheduleImage": {
+          "type": "Image",
+          "config": {
+            "label": "Yearly Schedule Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "classCardImage": {
+          "type": "Image",
+          "config": {
+            "label": "Class Card Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "classCardHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Class Card Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "classCardBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Class Card Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "classCardLink": {
+          "type": "Link",
+          "config": {
+            "label": "Class Card Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "classCardBgColour": {
+          "type": "Select",
+          "config": {
+            "label": "Class Card Background Colour",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Orange",
+              "Blue",
+              "Purple",
+              "Green",
+              "Lavender",
+              "Peach"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "bentoLayoutOne",
+      "name": "Bento Layout One",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        }
+      },
+      "items": {
+        "cardImage": {
+          "type": "Image",
+          "config": {
+            "label": "Card Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "cardHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "cardBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Card Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "strong,em,paragraph"
+          }
+        },
+        "cardLink": {
+          "type": "Link",
+          "config": {
+            "label": "Card Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

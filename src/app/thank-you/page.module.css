@@ -1,0 +1,101 @@
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    130deg,
+    var(--colorPrimary200) 20%,
+    var(--colorJasper) 100%
+  );
+  /* background-image: url('../assets/Images/background-gradient-mesh-001.jpg'); */
+  border-radius: var(--siteBorderRadius);
+  -webkit-border-radius: var(--siteBorderRadius);
+  -moz-border-radius: var(--siteBorderRadius);
+  -ms-border-radius: var(--siteBorderRadius);
+  -o-border-radius: var(--siteBorderRadius);
+  z-index: -1;
+}
+
+.container {
+  display: grid;
+}
+
+.sidePanel,
+.stickPeepFamilySVG {
+  display: none;
+}
+
+.innerContainer {
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+  place-content: center;
+  justify-self: center;
+  max-width: 68ch;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.headingContainer h1 {
+  display: inline-block;
+}
+
+.thankYouContainer {
+  display: grid;
+  gap: 3rem;
+  place-items: center;
+  max-width: 32ch;
+}
+
+.tick {
+  width: clamp(100px, calc(26vw + 1px), 136px);
+}
+
+@media (min-width: 978px) {
+  .container {
+    grid-template-columns: auto 1fr;
+  }
+
+  .sidePanel {
+    display: block;
+    position: relative;
+    width: clamp(10rem, 30vw, 40rem);
+    height: calc(100vh - 118px);
+    display: grid;
+    justify-content: end;
+  }
+
+  .sidePanel:before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 67%;
+    height: 100%;
+    background: linear-gradient(
+      130deg,
+      var(--colorPrimary200) 20%,
+      var(--colorJasper) 100%
+    );
+    opacity: 0.4;
+    border-radius: var(--siteBorderRadius);
+    -webkit-border-radius: var(--siteBorderRadius);
+    -moz-border-radius: var(--siteBorderRadius);
+    -ms-border-radius: var(--siteBorderRadius);
+    -o-border-radius: var(--siteBorderRadius);
+  }
+
+  .stickPeepFamilySVG {
+    display: block;
+    position: sticky;
+    top: 26rem;
+    margin-bottom: 8rem;
+  }
+
+  .innerContainer {
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+  }
+}

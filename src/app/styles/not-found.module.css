@@ -1,0 +1,46 @@
+.container {
+  display: grid;
+  place-items: center;
+  margin-top: 8rem;
+  padding-bottom: clamp(18rem, 30vw, 40rem);
+  background-image: url('/404-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.contentContainer {
+  --margin: clamp(1rem, 8vw, 8rem);
+  max-width: 72ch;
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading span {
+  display: block;
+  font-size: clamp(3.4rem, calc(6vw + 1px), 6.4rem);
+  line-height: var(--lineHeightLarge);
+}
+
+.body {
+  font-size: var(--fontSizeMediumText);
+  text-align: center;
+}
+
+@media (min-width: 978px) {
+  .contentContainer {
+    max-width: 74ch;
+  }
+  .heading span {
+    display: block;
+    font-size: var(--fontSizeLargeHeading);
+    line-height: var(--lineHeightLarge);
+  }
+}

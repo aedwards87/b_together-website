@@ -1,0 +1,136 @@
+{
+  "id": "pricing",
+  "type": "SharedSlice",
+  "name": "Pricing",
+  "description": "Pricing",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em,o-list-item,list-item"
+          }
+        }
+      },
+      "items": {
+        "category": {
+          "type": "Select",
+          "config": {
+            "label": "Category",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Non-member",
+              "Member",
+              "Monthly",
+              "Yearly"
+            ],
+            "default_value": "None"
+          }
+        },
+        "pricePlanHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Price Plan Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4,strong"
+          }
+        },
+        "pricePlanBody": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Price Plan Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em,list-item,o-list-item"
+          }
+        },
+        "pricingModel": {
+          "type": "Select",
+          "config": {
+            "label": "Pricing Model",
+            "placeholder": "",
+            "options": [
+              "Daily",
+              "Weekly",
+              "Monthly",
+              "Yearly"
+            ]
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        },
+        "startTime": {
+          "type": "Timestamp",
+          "config": {
+            "label": "Start Time",
+            "placeholder": ""
+          }
+        },
+        "finishTime": {
+          "type": "Timestamp",
+          "config": {
+            "label": "Finish Time",
+            "placeholder": ""
+          }
+        },
+        "buttonLabelOne": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label One",
+            "placeholder": ""
+          }
+        },
+        "buttonLinkOne": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link One",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "buttonLabelTwo": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label Two",
+            "placeholder": ""
+          }
+        },
+        "buttonLinkTwo": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link Two",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}
